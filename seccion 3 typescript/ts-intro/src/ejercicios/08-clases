@@ -1,0 +1,40 @@
+
+/*
+    ===== Código de TypeScript =====
+*/
+
+class PersonaNormal{
+   
+
+    constructor(
+        public nombre:string,
+        public direccion:string
+    ){}
+}
+
+
+class Heroe extends PersonaNormal {
+   /* private alterEgo: string; // solo visible dentro de la classe
+    public edad : number; // de adentro y de afuera
+    static nombreReal : number; //acceder a esta propiedad sin crear un instancia
+  */
+
+    constructor(
+
+        public alterEgo: string,
+        public edad:number,
+        public nombreReal:string
+    ) {
+        super(nombreReal,"malibu ny");
+    }
+    
+    /*imprimirNombre(){
+        return this.alterEgo + '' + this.edad;
+    }*/
+} 
+
+
+
+const ironman = new Heroe("irom man",40,"Tony stark",);
+
+console.log(ironman);

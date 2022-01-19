@@ -1,20 +1,14 @@
 /*
     ===== Código de TypeScript =====
 */
-function suma(a:number,b:number):number{
-    return a+b;
+
+interface Pasajero {
+    nombre:string;
+    hijos?: string[];
 }
 
-const sumarFlecha = (a:number,b:number):number=>{ 
-    
-    	return   a+b;
-}
+const pasajero1: Pasajero = {
+    nombre :"manuel",
+} 
 
-function multiplicar (numero:number,otronumero?:number,base:number = 2):number{
-    return numero * base;
-}
-
-const resultado  = multiplicar(5,0,10);
-
-
-console.log(resultado);
+console.log(pasajero1.hijos?.length || 0);
