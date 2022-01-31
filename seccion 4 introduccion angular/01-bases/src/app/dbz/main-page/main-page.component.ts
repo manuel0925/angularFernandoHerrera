@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+
+
 
 interface Personaje {
   nombre : string;
@@ -8,53 +11,18 @@ interface Personaje {
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  
+
 })
 export class MainPageComponent {
- 
-  personajes : Personaje[] = [
-    {
-      nombre:"Goku",
-      poder: 20000
-    },
-    {
-      nombre:"Vegueta",
-      poder : 30000
-    }
-  ];
+
+
 
   nuevo :Personaje = {
-    nombre: '',
-    poder: 0
-  }
-  
-  agregar(){
-     if(this.nuevo.nombre.trim().length === 0){
-       return;
-     }
-
-     this.personajes.push(this.nuevo);
-     console.log(this.nuevo)
-     this.LimpiarObjeto();
-
-     console.log(this.personajes);
-
-  }
-  
-  cambiarNombre(even : any){
-    console.log(even.target.value);
-
+    nombre: 'manuel',
+    poder: 5000
   }
 
-  LimpiarObjeto() {
-      this.nuevo = {
-        poder:0,
-        nombre:""
-      }
-
-    
-
-  }
+  constructor(){}
 
 
 
